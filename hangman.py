@@ -1,15 +1,15 @@
-import os
+import os, platform
 wrong_letters = set()
 assert_letters = set()
 wrongs_counter = 0
 
-_,_ = os.system('cls'), os.system('clear')
+os.system('cls') if platform.system() == 'Windows' else os.system('clear')
 print("*" * 50)
 print("{:^50}".format("JUEGO DEL AHORCADO"))
 print("*" * 50)
 
 word = input("\n\n\nIngresa la palabra secreta: ").lower()
-_,_ = os.system('cls'), os.system('clear')
+os.system('cls') if platform.system() == 'Windows' else os.system('clear')
 
 while True:
     print("\n\nPalabra secreta:", end=" ")
@@ -58,7 +58,7 @@ while True:
             print(""" 
                      ()
                     /||\ 
-                     /\
+                     /\\
                 """)
             print("\n\t -- PERDISTE --")
             break
